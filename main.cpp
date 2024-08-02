@@ -1,5 +1,7 @@
 #include <iostream>
+
 #include <vec3.h>
+#include <color.h>
 
 //File outputs a basic ppm file
 
@@ -18,15 +20,8 @@ int main() {
     for (int j = 0; j < img_height; j++){
         std::clog << "\rScanlines remaining: " << (img_height - j) << ' ' << std::flush;
         for (int i = 0; i < img_width; i++){
-            auto r = (double(i) / (img_width-1)) * 2;
-            auto g = (double(j) / (img_height-1)) * 2;
-            auto b = 0.0;
-
-            int ir = int(FULLBRIGHTNESS * r);
-            int ig = int(FULLBRIGHTNESS * g);
-            int ib = int(FULLBRIGHTNESS * b);
-
-            std::cout << ir << ' ' << ig << ' ' << ib << '\n';
+            auto pixel_color = color(double(i)/(img_width-1), double(j)/(img_height-1), 0);
+            write_color(std::cout, pixel_color);
         }
     }
 

@@ -5,4 +5,3 @@ file(GLOB SOURCES *.h)
 
 add_executable(main_file "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp")
 target_include_directories(main_file PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
