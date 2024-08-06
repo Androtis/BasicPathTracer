@@ -10,9 +10,9 @@ using color = vec3;
 const float FULL_BRIGHTNESS = 255;
 
 void write_color(std::ostream& out, const color& pixel_color){
-    auto r = pixel_color.x();
-    auto g = pixel_color.y();
-    auto b = pixel_color.z();
+    float r = pixel_color.x();
+    float g = pixel_color.y();
+    float b = pixel_color.z();
 
     int rbyte = int(FULL_BRIGHTNESS * r);
     int gbyte = int(FULL_BRIGHTNESS * g);
