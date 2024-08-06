@@ -7,7 +7,7 @@
 
 using color = vec3;
 
-const float FULL_BRIGHTNESS = 255.999;
+const float FULL_BRIGHTNESS = 255;
 
 void write_color(std::ostream& out, const color& pixel_color){
     auto r = pixel_color.x();
