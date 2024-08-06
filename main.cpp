@@ -42,7 +42,7 @@ int main() {
 
     //Image Parameters
 
-    int img_width = 2000;
+    int img_width = 1000;
     int img_height = int(img_width / aspect_ratio);
     
     img_height = (img_height < 1) ? 1 : img_height;
@@ -64,7 +64,7 @@ int main() {
 
     //Rendering & Outputing the image
 
-    std::cout << "P3\n" << img_width << ' ' << img_height << "\n1000\n";
+    std::cout << "P3\n" << img_width << ' ' << img_height << "\n255\n";
     
     for (int j = 0; j < img_height; j++){
         std::clog << "\rScanlines remaining: " << (img_height - j) << ' ' << std::flush;
